@@ -1,0 +1,7 @@
+{
+  "title": "SSH",
+  "description": "Conceitos básicos sobre o uso do SSH.",
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
