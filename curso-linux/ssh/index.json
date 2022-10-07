@@ -1,7 +1,19 @@
 {
   "title": "SSH",
   "description": "Conceitos básicos sobre o uso do SSH.",
-  "backend": {
-    "imageid": "ubuntu"
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Conectando a um servidor remoto.",
+        "text": "passo01/roteiro.md"
+      }
+    ],
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
   }
 }
