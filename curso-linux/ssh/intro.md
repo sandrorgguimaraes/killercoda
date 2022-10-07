@@ -1,4 +1,4 @@
-# SSH - Contato imediato de primeiro grau
+SSH - Contato imediato de primeiro grau
 
 Vamos aprender o básico sobre o uso do SSH.
 
