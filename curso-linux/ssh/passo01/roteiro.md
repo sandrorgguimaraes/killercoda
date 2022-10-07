@@ -1,4 +1,4 @@
-# Acessando um computador remoto.
+# Acessando um computador remoto
 
 Para acessar um computador remoto, utilize o seguinte comando.
 
