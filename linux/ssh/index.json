@@ -1,5 +1,5 @@
 {
-  "title": "SSH",
+  "title": "SSH - Contato imediato de primeiro grau",
   "description": "Conceitos básicos sobre o uso do SSH.",
   "details": {
     "intro": {
@@ -8,7 +8,7 @@
     },
     "steps": [
       {
-        "title": "Conectando a um servidor remoto.",
+        "title": "Criando um par de chaves SSH",
         "text": "passo01/roteiro.md"
       }
     ]
