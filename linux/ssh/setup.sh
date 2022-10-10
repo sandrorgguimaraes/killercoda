@@ -1,3 +1,4 @@
-useradd -m -s /usr/bin/bash -p sandro sandro
-ssh node01 "useradd -m -s /usr/bin/bash -p sandro sandro"
-su - sandro
+USUARIO="ubuntu1"
+SENHA="ubuntu1"
+sudo useradd -m -s /usr/bin/bash -p $(openssl passwd -1 $SENHA) $USUARIO
+ssh node01 sudo useradd -m -s /usr/bin/bash -p $(openssl passwd -1 $SENHA) $USUARIO
