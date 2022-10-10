@@ -11,9 +11,9 @@
         "title": "Conectando a um servidor remoto.",
         "text": "passo01/roteiro.md"
       }
-    ],
-    "backend": {
-      "imageid": "kubernetes-kubeadm-2nodes"
-    }
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
   }
 }
