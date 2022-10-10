@@ -1,7 +1,8 @@
-SSH - Contato imediato de primeiro grau
+# SSH - Contato imediato de primeiro grau
 
-Vamos aprender o básico sobre o uso do SSH.
+Neste cenário vamos aprender o básico sobre o uso do SSH.
 
-- Criando sua chave SSH
-- Copiando para um computador remoto
-- Executando comandos remotamente
+- Criando um par de chaves SSH
+- Copiando sua chave pública para um computador remoto
+- Executando comandos simples remotamente
+- Executando scripts remotamente
