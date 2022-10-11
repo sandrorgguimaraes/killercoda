@@ -1,8 +1,11 @@
-Neste cenário vamos aprender o básico sobre o uso do SSH.
+Neste cenário vamos conhecer um pouco do SSH (**S**ecure **SH**ell) e como utilizar o básico dele no nosso dia a dia.
 
-- Criar um par de chaves SSH
-- Copiar sua chave pública para um computador remoto
-- Executar comandos simples remotamente
-- Executar scripts remotamente
+A seguir veremos os seguintes passos:
 
-Mas antes de iniciar, vamos prepapar o ambiente criando os usuários que utilizaremos na conexão.
+- O que é **SSH** e como funciona?
+- Criando um par de chaves **SSH**;
+- Copiando sua chave pública para um computador remoto;
+- Executando comandos simples remotamente;
+- Executando scripts remotamente.
+
+Vamos em frente, bom exercício!
