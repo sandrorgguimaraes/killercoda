@@ -1,14 +1,23 @@
-O que é **SSH** e como funciona?
+# O que é **SSH** e como funciona?
 
-  O **SSH** foi desenvolvido com o intuito de habilitar um canal de comunicação segura entre 2 equipamentos, um que faz o papel de cliente **SSH** (origem da conexão) e outro que faz o papel de servidor **SSH** (destino da conexão), utilizando [criptografia de chave pública](https://medium.com/r/?url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FCriptografia_de_chave_p%25C3%25BAblica) ou criptografia assimétrica.
+O **SSH** foi desenvolvido com o intuito de habilitar um canal de comunicação segura entre 2 equipamentos, um que faz o papel de cliente **SSH** (origem da conexão) e outro que faz o papel de servidor **SSH** (destino da conexão), utilizando [criptografia de chave pública](https://medium.com/r/?url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FCriptografia_de_chave_p%25C3%25BAblica) ou criptografia assimétrica.
 
-- Para essa etapa vamos utilizar o usuário
+![SSH](./ssh.png)
+Fonte.: <https://www.hostinger.com.br/tutoriais/como-funciona-o-ssh>
 
-- Uso simples e direto
+## Uso simples e direto
 
-Para logar no computador remoto (o que faz o papel de servidor **SSH**) com o mesmo usuário logado localmente (a partir do computador que faz o papel de cliente **SSH**), simplesmente use:
+Para essa etapa vamos utilizar o usuário `ubuntu1`{{}}, utilize o comando abaixo para mudarmos de usuário:
 
-```plain
+```bash
+su - ubuntu1
+```{{exec}}
+
+O prompt de comando deve ter alterado para `ubuntu1@controlplane:~$`{{}} indicando que agora estamos trabalhando com o usuário `ubuntu1`{{}} no computador chamado `controlplane`{{}}.
+
+Para logar em um computador remoto (o que faz o papel de servidor **SSH**) com o mesmo usuário logado localmente, vamos usar o comando abaixo:
+
+```bash
 ssh node01
 ```{{exec}}
 
