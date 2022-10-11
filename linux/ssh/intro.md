@@ -1,4 +1,4 @@
-Neste cenário vamos conhecer um pouco do SSH (**S**ecure **SH**ell) e como utilizar o básico dele no nosso dia a dia.
+Neste cenário vamos conhecer um pouco do SSH (***S**ecure **SH**ell*) e como utilizar o básico dele no nosso dia a dia.
 
 A seguir veremos os seguintes passos:
 
