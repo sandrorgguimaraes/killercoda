@@ -19,22 +19,22 @@ Para logarmos em outro computador (o que faz o papel de servidor **SSH**) com um
 ssh node01
 ```{{exec}}
 
+Se for a primeira conexão à este computador, será perguntado se queremos armazenar localmente a [chave ECDSA](https://medium.com/r/?url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FECDSA) deste computador conforme abaixo, responda `yes`{{exec}}.
+
 ```bash
 The authenticity of host 'node01 (172.30.2.2)' can't be established.
 ECDSA key fingerprint is SHA256:OvIkq0qqws0HP70HLCCdX31wLWoI/yvcN+sCCN3Krts.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```{{}}
 
-Se for a primeira conexão à este computador, será perguntado se queremos armazenar localmente a [chave ECDSA](https://medium.com/r/?url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FECDSA) deste computador, responda `yes`{{exec}}.
+Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada permanentemente e na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
+
+Informe a senha `ubuntu1`{{exec}}.
 
 ```plain
 Warning: Permanently added 'node01,172.30.2.2' (ECDSA) to the list of known hosts.
 ubuntu1@node01's password:
 ```{{}}
-
-Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada permanentemente e na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
-
-Informe a senha `ubuntu1`{{exec}}.
 
 > Agora o prompt de comando deve ser `ubuntu1@node01:~$`{{}} indicando que estamos trabalhando com o usuário `ubuntu1`{{}} **só que no computador** `node01`{{}}.
 
@@ -50,7 +50,7 @@ Para acessarmos o computador remoto com um usuário diferente do que está logad
 ssh ubuntu@node01
 ```{{exec}}
 
-Se perguntar se queremos gravar localmente a chave ECDSA do computador remoto digite `yes`{{exec}} e ao ser solicitada a senha informe `ubuntu`{{exec}}.
+Ao ser solicitada a senha informe `ubuntu`{{exec}}.
 
 > Repare que agora o prompt de comando é `ubuntu@node01:~$`{{}} indicando que estamos trabalhando com o usuário `ubuntu`{{}} no computador `node01`{{}}.
 
