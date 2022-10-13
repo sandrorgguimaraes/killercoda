@@ -29,12 +29,12 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada permanentemente e na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
 
-Informe a senha `ubuntu1`{{exec}}.
-
 ```plain
 Warning: Permanently added 'node01,172.30.2.2' (ECDSA) to the list of known hosts.
 ubuntu1@node01's password:
 ```{{}}
+
+Informe a senha `ubuntu1`{{exec}}.
 
 > Agora o prompt de comando deve ser `ubuntu1@node01:~$`{{}} indicando que estamos trabalhando com o usuário `ubuntu1`{{}} **só que no computador** `node01`{{}}.
 
