@@ -20,7 +20,6 @@ ssh node01
 ```{{exec}}
 
 ```bash
-ubuntu@controlplane:~$ ssh node01
 The authenticity of host 'node01 (172.30.2.2)' can't be established.
 ECDSA key fingerprint is SHA256:OvIkq0qqws0HP70HLCCdX31wLWoI/yvcN+sCCN3Krts.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
@@ -40,5 +39,6 @@ Informe a senha `ubuntu`{{exec}}.
 Por fim é exibida uma mensagem explicando como podemos executar algum comando como o usuário `root`{{}}.
 
 > Agora o prompt de comando deve ser `ubuntu@node01:~$`{{}} indicando que estamos trabalhando com o usuário `ubuntu`{{}} **só que no computador** `node01`{{}}.
+
 
 No próximo passo vamos criar um usuário comum, neste computador remoto, para utiliza-lo nos nossos exercício. Vamos em frente.
