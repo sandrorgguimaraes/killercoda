@@ -27,12 +27,12 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 Se for a primeira conexão à este computador, será perguntado se queremos armazenar localmente a chave ECDSA deste computador, responda `yes`{{exec}}.
 
-Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada permanentemente e na sequencia se pede a senha de login do usuário `ubuntu`{{}} no computador `node01`{{}}.
-
 ```plain
 Warning: Permanently added 'node01,172.30.2.2' (ECDSA) to the list of known hosts.
 ubuntu@node01's password:
 ```{{}}
+
+Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada permanentemente e na sequencia se pede a senha de login do usuário `ubuntu`{{}} no computador `node01`{{}}.
 
 Informe a senha `ubuntu`{{exec}}.
 

@@ -1,4 +1,3 @@
-USUARIO="ubuntu1";
-COMANDO="sudo useradd -m -s /usr/bin/bash -p $(openssl passwd -1 $USUARIO) $USUARIO";
-eval ($COMANDO);
-ssh node01 eval ($COMANDO);
+sudo useradd -m -s /usr/bin/bash -p $(openssl passwd -1 ubuntu1) ubuntu1;
+ssh node01 sudo useradd -m -s /usr/bin/bash -p $(openssl passwd -1 ubuntu1) ubuntu1;
+
