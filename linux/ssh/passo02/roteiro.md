@@ -1,24 +1,24 @@
-Para evitarmos a digitação da senha de login a cada nova conexão sem prejudicar a segurança na comunicação, primeiro é necessário criarmos o nosso par de chaves (apenas uma vez) e posteriormente copiarmos a chave pública para os computadores remotos.
+Para evitarmos a digitação da senha de login a cada nova conexão sem prejudicar a segurança na comunicação, primeiro é necessário criarmos o nosso par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
 
 ## Antes de começar
 
 Vamos só confirmar que não temos nenhum par de chaves criado no momento.
 
-> Certifique-se que esteja logado com o usuário `ubuntu1`{{}} no computador `controlplane`{{}}, para tanto o prompt de comando ser `ubuntu1@controlplane:~$`{{}}.
+> Certifique-se que esteja logado com o usuário `ubuntu1`{{}} no computador `controlplane`{{}}, para tanto o prompt de comando deve ser `ubuntu1@controlplane:~$`{{}}.
 
 Voltando para a pasta `$HOME`{{}} do usuário `ubuntu1`{{}}, digite:
 
 ```bash
 cd
-```
+```{{exec}}
 
 E liste as pastas existentes:
 
 ```bash
 ls -la
-```
+```{{exec}}
 
-> Observe que não temos uma pasta `.ssh`{{}}, ela será criada durante a execução do próximo comando.
+> Observe que não temos a pasta `.ssh`{{}}, ela será criada durante a execução do próximo comando.
 
 ## Criando o par de chaves
 
@@ -26,22 +26,25 @@ Para a criação do par de chaves **SSH** (pública e privada) utilizamos o coma
 
 > No nosso exemplo não iremos passar parâmetros e vamos aceitar as opções padrões.
 
-Vamos lá então, inicie o processo digitanto o comando abaixo:
+Vamos lá, inicie o processo digitanto o comando abaixo:
 
 ```bash
 ssh-keygen
 ```{{exec}}
 
-Será apresentado uma mensagem informando que será gerada uma senha do tipo RSA e pedindo para confirmar o nome do arquivo que será gravada. Tecle **ENTER** para confirmar.
+Será apresentado uma mensagem informando que será gerada uma senha do [tipo RSA](https://pt.wikipedia.org/wiki/RSA_(sistema_criptogr%C3%A1fico)) e pedindo para confirmar o nome do arquivo em que será gravada.
 
 ```bash
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/ubuntu1/.ssh/id_rsa): 
 ```{{}}
 
-Neste momento a pasta `/home/ubuntu1/.ssh`{{}} é criada e é solicitada a digitação de uma senha de proteção, conforme abaixo.
+Tecle **ENTER** para confirmar.
+
+Neste momento a pasta `/home/ubuntu1/.ssh`{{}} é criada, se não existir, e é solicitada a digitação de uma senha de proteção, conforme abaixo.
 
 ```bash
+Created directory '/home/ubuntu1/.ssh'.
 Enter passphrase (empty for no passphrase): 
 ```{{}}
 
@@ -97,4 +100,4 @@ Observe que a chave privada **`id_rsa`{{}}** está configurada para acesso restr
 
 Para conhecer todas as opções disponíveis na criação das chaves SSH, execute `man ssh-keygen`.
 
-Pronto! Primeira etapa concluída, vamos seguir em frente! Bom trabalho!
+Bom trabalho! Primeira etapa concluída, vamos seguir em frente!
