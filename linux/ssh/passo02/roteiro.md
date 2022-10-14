@@ -1,24 +1,51 @@
-Para simplificarmos o processo de login evitando a digitação da senha de login a cada nova conexão, sem prejudicar a segurança, vamos criar um par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
+Para simplificarmos o processo de login evitando a digitação da senha a cada nova conexão, sem prejudicar a segurança, vamos criar um par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
 
 ## Antes de começar
 
-Vamos só confirmar que não temos nenhum par de chaves criado no momento.
+Vamos confirmar que não temos nenhum par de chaves criado no momento.
 
 > Certifique-se que esteja logado com o usuário `ubuntu1`{{}} no computador `controlplane`{{}}, para tanto o prompt de comando deve ser `ubuntu1@controlplane:~$`{{}}.
 
-Voltando para a pasta `$HOME`{{}} do usuário `ubuntu1`{{}}, digite:
+Vamos limpar a tela, voltar para a pasta `$HOME`{{}} do usuário `ubuntu1`{{}} e listar seu conteúdo:
 
 ```bash
+clear
 cd
-```{{exec}}
-
-E liste as pastas existentes:
-
-```bash
 ls -la
 ```{{exec}}
 
-> Observe que não temos a pasta `.ssh`{{}}, ela será criada durante a execução do próximo comando.
+O resultado deve ser:
+
+```bash
+total 24
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 .
+drwxr-xr-x 4 root    root    4096 Oct 14 11:30 ..
+-rw-r--r-- 1 ubuntu1 ubuntu1  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 ubuntu1 ubuntu1 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 ubuntu1 ubuntu1  807 Feb 25  2020 .profile
+drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 11:31 .ssh
+```{{}}
+
+Observe que temos uma pasta `.ssh`{{}}, vamos ver o conteúdo dela:
+
+```bash
+ls -la .ssh/
+```{{exec}}
+
+O resultado deve ser:
+
+```bash
+total 12
+drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 11:31 .
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 ..
+-rw-r--r-- 1 ubuntu1 ubuntu1  444 Oct 14 11:31 known_hosts
+```{{}}
+
+Este arquivo `/home/ubuntu1/.ssh/known_hosts`{{}} foi criado no passo anterior e armazena as chaves públicas dos computadores que nos conectamos anteriormente, se quiser ver o conteúdo desse arquivo use o comando abaixo:
+
+```bash
+cat /home/ubuntu1/.ssh/known_hosts
+```{{exec}}
 
 ## Criando o par de chaves
 
@@ -26,13 +53,13 @@ Para a criação do par de chaves **SSH** (pública e privada) utilizamos o coma
 
 > No nosso exemplo não iremos passar parâmetros e vamos aceitar as opções padrões.
 
-Vamos lá, inicie o processo digitanto o comando abaixo:
+Inicie o processo digitanto o comando abaixo:
 
 ```bash
 ssh-keygen
 ```{{exec}}
 
-Será apresentado uma mensagem informando que será gerada uma senha do [tipo RSA](https://pt.wikipedia.org/wiki/RSA_(sistema_criptogr%C3%A1fico)) e pedindo para confirmar o nome do arquivo em que será gravada.
+Será apresentado uma mensagem informando que será gerada uma senha do [tipo RSA](https://pt.wikipedia.org/wiki/RSA_(sistema_criptogr%C3%A1fico)) e pedindo para confirmar o nome e local do arquivo em que será gravada.
 
 ```bash
 Generating public/private rsa key pair.
@@ -41,16 +68,17 @@ Enter file in which to save the key (/home/ubuntu1/.ssh/id_rsa):
 
 Tecle **ENTER** para confirmar.
 
-Neste momento a pasta `/home/ubuntu1/.ssh`{{}} é criada, se não existir, e é solicitada a digitação de uma senha de proteção, conforme abaixo.
+Neste momento se a pasta `/home/ubuntu1/.ssh`{{}} não existir seria criada, e é solicitada a digitação de uma senha de proteção conforme abaixo.
 
 ```bash
-Created directory '/home/ubuntu1/.ssh'.
 Enter passphrase (empty for no passphrase): 
 ```{{}}
 
-Por hora não vamos informar essa senha, pode teclar **ENTER** para deixar em branco.
+Por hora não vamos informar essa senha de proteção, então pode teclar **ENTER** para deixar em branco.
 
-Quando pedir para confirmar a senha com a mensagem `Enter same passphrase again:`{{}}, como deixamos em branco pode teclar **ENTER** novamente.
+Vai ser solicitado para confirmar a senha com a mensagem `Enter same passphrase again:`{{}}.
+
+Como deixamos em branco pode teclar **ENTER** novamente.
 
 Por fim é exibida as informações abaixo, contendo o nome dos arquivos criados, a impressão digital e a imagem randômica da chave.
 
@@ -75,7 +103,7 @@ The key's randomart image is:
 
 ## Verificando o resultado desse processo
 
-Vamos acessar a pasta que foi criada durante o processo acima e listar os arquivos criados, com os comandos abaixo.
+Vamos acessar a pasta `.ssh`{{}} e listar o seu conteúdo atual, com os comandos abaixo.
 
 ```bash
 cd ~/.ssh
@@ -87,17 +115,25 @@ Observe o resultado.
 ```bash
 ubuntu1@controlplane:~$ cd ~/.ssh/
 ubuntu1@controlplane:~/.ssh$ ls -la
-total 16
-drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 00:31 .
-drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 00:25 ..
--rw------- -rw-------1 ubuntu1 ubuntu1 2610 Oct 14 00:31 id_rsa
--rw-r--r-- 1 ubuntu1 ubuntu1  574 Oct 14 00:31 id_rsa.pub
+total 20
+drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 11:44 .
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 ..
+-rw------- 1 ubuntu1 ubuntu1 2610 Oct 14 11:44 id_rsa
+-rw-r--r-- 1 ubuntu1 ubuntu1  574 Oct 14 11:44 id_rsa.pub
+-rw-r--r-- 1 ubuntu1 ubuntu1  444 Oct 14 11:31 known_hosts
 ```{{}}
 
-Observe que a chave privada **`id_rsa`{{}}** está configurada para acesso restrito `rw-------`{{}} ao proprietário `ubuntu1`{{}}, enquanto a chave pública **`id_rsa.pub`{{}}** tem a leitura liberada para qualquer usuário `rw-r--r--`{{}}.
+Observe que além do arquivo `known_hosts`{{}}, temos 2 novos arquivos.
+
+- A chave privada **`id_rsa`{{}}** que está configurada para acesso restrito **`rw-------`{{}}** ao proprietário **`ubuntu1`{{}}**;
+- E a chave pública **`id_rsa.pub`{{}}** com permissão de leitura liberada para qualquer usuário **`rw-r--r--`{{}}**.
 
 > ***Lembre-se.:** Se alguém tiver acesso às suas chaves pública e privada, poderá logar nos computadores remotos com seu usuário. Para mitigar esse risco é recomendável que no processo de criação, visto acima, seja informada a senha de proteção.*
 
-Para conhecer todas as opções disponíveis na criação das chaves SSH, execute `man ssh-keygen`.
+Para conhecer todas as opções disponíveis na criação das chaves SSH, execute o comando:
+
+```bash
+man ssh-keygen
+```
 
 Bom trabalho! Primeira etapa concluída, vamos em frente!
