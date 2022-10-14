@@ -10,6 +10,10 @@
       {
         "title": "O que é SSH e como funciona?",
         "text": "passo01/roteiro.md"
+      },
+      {
+        "title": "Criando um par de chaves SSH",
+        "text": "passo02/roteiro.md"
       }
     ]
   },
