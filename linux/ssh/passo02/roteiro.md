@@ -1,4 +1,4 @@
-Para evitarmos a digitação da senha de login a cada nova conexão sem prejudicar a segurança na comunicação, primeiro é necessário criarmos o nosso par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
+Para simplificarmos o processo de login evitando a digitação da senha de login a cada nova conexão, sem prejudicar a segurança, vamos criar um par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
 
 ## Antes de começar
 
@@ -90,14 +90,14 @@ ubuntu1@controlplane:~/.ssh$ ls -la
 total 16
 drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 00:31 .
 drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 00:25 ..
--rw------- 1 ubuntu1 ubuntu1 2610 Oct 14 00:31 id_rsa
+-rw------- -rw-------1 ubuntu1 ubuntu1 2610 Oct 14 00:31 id_rsa
 -rw-r--r-- 1 ubuntu1 ubuntu1  574 Oct 14 00:31 id_rsa.pub
 ```{{}}
 
-Observe que a chave privada **`id_rsa`{{}}** está configurada para acesso restrito ao proprietário `ubuntu1`{{}}, enquanto a chave pública **`id_rsa.pub`{{}}** tem a leitura liberada para qualquer usuário.
+Observe que a chave privada **`id_rsa`{{}}** está configurada para acesso restrito `rw-------`{{}} ao proprietário `ubuntu1`{{}}, enquanto a chave pública **`id_rsa.pub`{{}}** tem a leitura liberada para qualquer usuário `rw-r--r--`{{}}.
 
 > ***Lembre-se.:** Se alguém tiver acesso às suas chaves pública e privada, poderá logar nos computadores remotos com seu usuário. Para mitigar esse risco é recomendável que no processo de criação, visto acima, seja informada a senha de proteção.*
 
 Para conhecer todas as opções disponíveis na criação das chaves SSH, execute `man ssh-keygen`.
 
-Bom trabalho! Primeira etapa concluída, vamos seguir em frente!
+Bom trabalho! Primeira etapa concluída, vamos em frente!

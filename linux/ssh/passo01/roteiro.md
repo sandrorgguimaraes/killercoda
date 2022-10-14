@@ -27,7 +27,7 @@ ECDSA key fingerprint is SHA256:OvIkq0qqws0HP70HLCCdX31wLWoI/yvcN+sCCN3Krts.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```{{}}
 
-Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada permanentemente e na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
+Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada a esta sessão do Shell e na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
 
 ```plain
 Warning: Permanently added 'node01,172.30.2.2' (ECDSA) to the list of known hosts.
@@ -49,6 +49,8 @@ Para acessarmos o computador remoto com um usuário diferente do que está logad
 ```bash
 ssh ubuntu@node01
 ```{{exec}}
+
+> Percebeu que não foi perguntado sobre a chave ECDSA do `node01`{{}}. 
 
 Ao ser solicitada a senha informe `ubuntu`{{exec}}.
 
