@@ -34,10 +34,6 @@ ubuntu1@node01's password:
 
 Informe a senha `ubuntu1`{{exec}}.
 
-```bash
-ubuntu1@node01's password: 
-```{{}}
-
 Pronto! Sua chave pública foi copiada para o computador `node01`{{}} e a partir de agora não será mais solicitada a digitação da senha de login, conforme a mensagem abaixo.
 
 ```bash
@@ -102,7 +98,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDa0uA9zXT1x2NUex8IpvGzOmdhse+To9u9k7udA3YC
 
 > Repare que no final da chave é indicado o usuário e computador de origem **`ubuntu1@controlplane`{{}}**.
 
-Vamos retornar ao computador de origem, digite:
+Vamos retornar ao computador de origem com o comando abaixo:
 
 ```bash
 exit
