@@ -2,7 +2,7 @@ Para copiar a chave pública para um computador remoto é super simples, vamos u
 
 ## Antes de começar
 
-> Certifique-se que esteja logado com o usuário `ubuntu1`{{}} no computador `controlplane`{{}}, para tanto o prompt de comando deve ser `ubuntu1@controlplane:~$`{{}}.
+> Certifique-se que esteja logado com o usuário `ubuntu1`{{}} no computador `controlplane`{{}}, para tanto o prompt de comando deve ser `ubuntu1@controlplane:~/.ssh$`{{}}.
 
 Vamos limpar a tela antes de prosseguir.
 
@@ -71,16 +71,16 @@ cd ~/.ssh/
 ls -la
 ```{{exec}}
 
-O resultado deve ser:
+O resultado deve ser parecido com...
 
 ```bash
 total 12
-drwx------ 2 ubuntu1 ubuntu1 4096 Oct 17 11:04 .
-drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 17 11:04 ..
--rw------- 1 ubuntu1 ubuntu1  574 Oct 17 11:04 authorized_keys
+drwx------ 2 ubuntu1 ubuntu1 4096 Xxx 99 11:04 .
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Xxx 99 11:04 ..
+-rw------- 1 ubuntu1 ubuntu1  574 Xxx 99 11:04 authorized_keys
 ```{{}}
 
-> Repare que o arquivo `authorized_keys` acabou de ser criado.
+> Repare que o arquivo `authorized_keys`{{}} acabou de ser criado.
 
 Este arquivo armazena as chaves públicas do usuário `ubuntu1`{{}}
 

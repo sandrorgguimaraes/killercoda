@@ -14,16 +14,16 @@ cd
 ls -la
 ```{{exec}}
 
-O resultado deve ser:
+O resultado deve ser parecido com...
 
 ```bash
 total 24
-drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 .
-drwxr-xr-x 4 root    root    4096 Oct 14 11:30 ..
--rw-r--r-- 1 ubuntu1 ubuntu1  220 Feb 25  2020 .bash_logout
--rw-r--r-- 1 ubuntu1 ubuntu1 3771 Feb 25  2020 .bashrc
--rw-r--r-- 1 ubuntu1 ubuntu1  807 Feb 25  2020 .profile
-drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 11:31 .ssh
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Xxx 99 11:31 .
+drwxr-xr-x 4 root    root    4096 Xxx 99 11:30 ..
+-rw-r--r-- 1 ubuntu1 ubuntu1  220 Xxx 99  2020 .bash_logout
+-rw-r--r-- 1 ubuntu1 ubuntu1 3771 Xxx 99  2020 .bashrc
+-rw-r--r-- 1 ubuntu1 ubuntu1  807 Xxx 99  2020 .profile
+drwx------ 2 ubuntu1 ubuntu1 4096 Xxx 99 11:31 .ssh
 ```{{}}
 
 Observe que temos uma pasta `.ssh`{{}}, vamos ver o conteúdo dela:
@@ -32,13 +32,13 @@ Observe que temos uma pasta `.ssh`{{}}, vamos ver o conteúdo dela:
 ls -la .ssh/
 ```{{exec}}
 
-O resultado deve ser:
+O resultado deve ser parecido com...
 
 ```bash
 total 12
-drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 11:31 .
-drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 ..
--rw-r--r-- 1 ubuntu1 ubuntu1  444 Oct 14 11:31 known_hosts
+drwx------ 2 ubuntu1 ubuntu1 4096 Xxx 99 11:31 .
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Xxx 99 11:31 ..
+-rw-r--r-- 1 ubuntu1 ubuntu1  444 Xxx 99 11:31 known_hosts
 ```{{}}
 
 Este arquivo `/home/ubuntu1/.ssh/known_hosts`{{}} foi criado no passo anterior e armazena as chaves públicas dos computadores que nos conectamos anteriormente, se quiser ver o conteúdo desse arquivo use o comando abaixo:
@@ -123,11 +123,11 @@ Observe que além do arquivo `known_hosts`{{}}, temos 2 novos arquivos.
 ubuntu1@controlplane:~$ cd ~/.ssh/
 ubuntu1@controlplane:~/.ssh$ ls -la
 total 20
-drwx------ 2 ubuntu1 ubuntu1 4096 Oct 14 11:44 .
-drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 ..
--rw------- 1 ubuntu1 ubuntu1 2610 Oct 14 11:44 id_rsa
--rw-r--r-- 1 ubuntu1 ubuntu1  574 Oct 14 11:44 id_rsa.pub
--rw-r--r-- 1 ubuntu1 ubuntu1  444 Oct 14 11:31 known_hosts
+drwx------ 2 ubuntu1 ubuntu1 4096 Xxx 99 11:44 .
+drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Xxx 99 11:31 ..
+-rw------- 1 ubuntu1 ubuntu1 2610 Xxx 99 11:44 id_rsa
+-rw-r--r-- 1 ubuntu1 ubuntu1  574 Xxx 99 11:44 id_rsa.pub
+-rw-r--r-- 1 ubuntu1 ubuntu1  444 Xxx 99 11:31 known_hosts
 ```{{}}
 
 > ***Lembre-se.:** Se alguém tiver acesso às suas chaves pública e privada, poderá logar nos computadores remotos com seu usuário. Para mitigar esse risco é recomendável que no processo de criação, visto acima, seja informada a senha de proteção.*
