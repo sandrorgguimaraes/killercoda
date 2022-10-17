@@ -19,7 +19,7 @@ Para logarmos em outro computador (o que faz o papel de servidor **SSH**) com um
 ssh node01
 ```{{exec}}
 
-Se for a primeira conexão à este computador, será perguntado se queremos armazenar localmente a [chave ECDSA](https://medium.com/r/?url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FECDSA) deste computador conforme abaixo.
+Como é a primeira conexão à este computador, será perguntado se queremos armazenar localmente a [chave ECDSA](https://medium.com/r/?url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FECDSA) deste computador conforme abaixo.
 
 ```bash
 The authenticity of host 'node01 (172.30.2.2)' can't be established.
@@ -29,10 +29,17 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 Responda `yes`{{exec}}.
 
-Será apresentada uma mensagem confirmando que a chave ECDSA foi adicionada a esta sessão do Shell (armazenando no arquivo `/home/ubuntu1/.ssh/known_hosts`{{}}) e na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
-
-```plain
+```bash
 Warning: Permanently added 'node01,172.30.2.2' (ECDSA) to the list of known hosts.
+```{{}}
+
+Será apresentada uma mensagem confirmando que a chave ECDSA do `node01`{{}} foi adicionada permanentemente.
+
+> Estas chaves são armazenadas no arquivo `/home/ubuntu1/.ssh/known_hosts`{{}}.
+
+E na sequencia se pede a senha de login do usuário `ubuntu1`{{}} no computador `node01`{{}}.
+
+```bash
 ubuntu1@node01's password:
 ```{{}}
 
@@ -58,7 +65,7 @@ Para acessarmos o computador remoto com um usuário diferente do que está logad
 ssh ubuntu@node01
 ```{{exec}}
 
-> Percebeu que não foi perguntado sobre a chave ECDSA do `node01`{{}}?
+> Percebeu que não foi perguntado sobre a chave ECDSA do `node01`{{}}? Porque já temos a mesma armazenada localmente.
 
 Ao ser solicitada a senha de login informe:
 
@@ -66,7 +73,7 @@ Ao ser solicitada a senha de login informe:
 ubuntu
 ```{{exec}}
 
-> Repare que agora o prompt de comando é `ubuntu@node01:~$`{{}} indicando que estamos trabalhando com o usuário `ubuntu`{{}} no computador `node01`{{}}.
+> Repare que agora o prompt de comando é `ubuntu@node01:~$`{{}} indicando que estamos trabalhando com o usuário **`ubuntu`{{}}** no computador `node01`{{}}.
 
 Para retornarmos ao computador de origem, digite:
 

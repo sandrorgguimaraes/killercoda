@@ -1,4 +1,4 @@
-Para simplificarmos o processo de login evitando a digitação da senha a cada nova conexão, sem prejudicar a segurança, vamos criar um par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
+Para simplificarmos o processo de login evitando a digitação da senha a cada nova conexão, vamos criar um par de chaves (apenas uma vez) e posteriormente copiaremos a chave pública para os computadores remotos.
 
 ## Antes de começar
 
@@ -47,13 +47,15 @@ Este arquivo `/home/ubuntu1/.ssh/known_hosts`{{}} foi criado no passo anterior e
 cat /home/ubuntu1/.ssh/known_hosts
 ```{{exec}}
 
+> Observe que não temos outros arquivos nesta pasta.
+
 ## Criando o par de chaves
 
 Para a criação do par de chaves **SSH** (pública e privada) utilizamos o comando `ssh-keygen`{{}}.
 
 > No nosso exemplo não iremos passar parâmetros e vamos aceitar as opções padrões.
 
-Inicie o processo digitanto o comando abaixo:
+Inicie o processo usando o comando abaixo:
 
 ```bash
 ssh-keygen
@@ -68,7 +70,9 @@ Enter file in which to save the key (/home/ubuntu1/.ssh/id_rsa):
 
 Tecle **ENTER** para confirmar.
 
-Neste momento se a pasta `/home/ubuntu1/.ssh`{{}} não existir seria criada, e é solicitada a digitação de uma senha de proteção conforme abaixo.
+> Neste momento se a pasta `/home/ubuntu1/.ssh`{{}} não existisse seria criada.
+
+É solicitada a digitação de uma senha de proteção conforme abaixo.
 
 ```bash
 Enter passphrase (empty for no passphrase): 
@@ -110,7 +114,10 @@ cd ~/.ssh
 ls -la
 ```{{exec}}
 
-Observe o resultado.
+Observe que além do arquivo `known_hosts`{{}}, temos 2 novos arquivos.
+
+- A chave privada **`id_rsa`{{}}** que está configurada para acesso restrito **`rw-------`{{}}** ao proprietário **`ubuntu1`{{}}**;
+- E a chave pública **`id_rsa.pub`{{}}** com permissão de leitura liberada para qualquer usuário **`rw-r--r--`{{}}**.
 
 ```bash
 ubuntu1@controlplane:~$ cd ~/.ssh/
@@ -122,11 +129,6 @@ drwxr-xr-x 3 ubuntu1 ubuntu1 4096 Oct 14 11:31 ..
 -rw-r--r-- 1 ubuntu1 ubuntu1  574 Oct 14 11:44 id_rsa.pub
 -rw-r--r-- 1 ubuntu1 ubuntu1  444 Oct 14 11:31 known_hosts
 ```{{}}
-
-Observe que além do arquivo `known_hosts`{{}}, temos 2 novos arquivos.
-
-- A chave privada **`id_rsa`{{}}** que está configurada para acesso restrito **`rw-------`{{}}** ao proprietário **`ubuntu1`{{}}**;
-- E a chave pública **`id_rsa.pub`{{}}** com permissão de leitura liberada para qualquer usuário **`rw-r--r--`{{}}**.
 
 > ***Lembre-se.:** Se alguém tiver acesso às suas chaves pública e privada, poderá logar nos computadores remotos com seu usuário. Para mitigar esse risco é recomendável que no processo de criação, visto acima, seja informada a senha de proteção.*
 
