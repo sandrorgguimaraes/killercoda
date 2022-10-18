@@ -136,7 +136,7 @@ Qual a diferença?
 
 <details><summary>Resposta</summary><br>
 O nome do computador na primeira linha, indicando onde o script foi executado.
-</details>
+</details><br>
 
 Show! Com o básico que aprendemos até aqui, já é possível otimizar algumas tarefas do nosso dia a dia.
 
