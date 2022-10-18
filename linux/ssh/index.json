@@ -26,7 +26,8 @@
     ],
     "assets": {
       "host01": [
-        { "file": "script01.sh", "target": "/tmp", "chmod": "+x" }
+        { "file": "script01.sh", "target": "/tmp", "chmod": "+x" },
+        { "file": "script02.sh", "target": "/tmp", "chmod": "+x" }
       ]
     }
   },

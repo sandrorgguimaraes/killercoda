@@ -15,7 +15,7 @@ clear
 Só pra efeito didático, vamos consultar o nome do computador remoto com o comando abaixo:
 
 ```bash
-ssh node hostname
+ssh node01 hostname
 ```{{exec}}
 
 O resultado deve ser o seguinte
@@ -53,7 +53,7 @@ nameserver 1.1.1.1
 
 ## Mais de um comando, ainda é simples
 
-Para executar mais de um comando na mesma conexão, precisamos passar os comando como se fosse uma única string.
+Para executar mais de um comando na mesma conexão, precisamos passar os comandos como se fossem uma única string.
 
 Vamos testar este primeiro exemplo:
 
@@ -90,14 +90,15 @@ _POSIX_ARG_MAX                     2097152
 
 ## Enviando um script para execução remota
 
-Vamos limpar a tela e voltar à pasta `$HOME` com os comandos abaixo:
+Vamos limpar a tela, voltar à pasta `$HOME` e copiar o script que está na pasta `/tmp`{{}}, com os comandos abaixo:
 
 ```bash
 clear
 cd
+cp /tmp/script01.sh .
 ```{{exec}}
 
-Se quiser conferir o que o script vai executar, use o comando abaixo:
+Se quiser conferir o conteúdo do script, use o comando...
 
 ```bash
 cat script01.sh
