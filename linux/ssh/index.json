@@ -18,8 +18,17 @@
       {
         "title": "Copiando a chave pública",
         "text": "passo03/roteiro.md"
+      },
+      {
+        "title": "Executando comandos simples",
+        "text": "passo04/roteiro.md"
       }
-    ]
+    ],
+    "assets": {
+      "controlplane": [
+        { "file": "script01.sh", "target": "~/", "chmod": "+x" }
+      ]
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
