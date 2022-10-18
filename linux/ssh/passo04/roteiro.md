@@ -134,9 +134,9 @@ Agora execute esse script localmente, com o comando abaixo.
 
 Qual a diferença?
 
-### Solution
-
+<details><summary>Resposta</summary><br>
 O nome do computador na primeira linha, indicando onde o script foi executado.
+</details>
 
 Show! Com o básico que aprendemos até aqui, já é possível otimizar algumas tarefas do nosso dia a dia.
 
