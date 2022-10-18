@@ -25,8 +25,8 @@
       }
     ],
     "assets": {
-      "controlplane": [
-        { "file": "script01.sh", "target": "~/", "chmod": "+x" }
+      "host01": [
+        { "file": "script01.sh", "target": "/home/ubuntu1/", "chmod": "+x" }
       ]
     }
   },
