@@ -134,7 +134,7 @@ Agora execute esse script localmente, com o comando abaixo.
 
 Qual a diferença?
 
-### Solução
+### Solution
 
 O nome do computador na primeira linha, indicando onde o script foi executado.
 
