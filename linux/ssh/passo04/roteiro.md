@@ -1,4 +1,8 @@
-Se soubermos antecipadamente o que precisamos fazer no computador remoto e quisermos agilizar um pouco mais o processo, podemos utilizar o SSH da seguinte forma `ssh nome-do-computador.exemplo.com.br [COMANDO|SCRIPT]`{{}}.
+Se soubermos antecipadamente o que precisamos fazer no computador remoto e quisermos agilizar um pouco mais o processo, podemos utilizar o SSH da seguinte forma:
+
+```bash
+ssh nome-do-computador.exemplo.com.br [COMANDO|SCRIPT]
+```{{}}
 
 ## Antes de começar
 
@@ -53,7 +57,7 @@ nameserver 1.1.1.1
 
 ## Mais de um comando, ainda é simples
 
-Para executar mais de um comando na mesma conexão, precisamos passar os comandos como se fossem uma única string.
+Para executar mais de um comando na mesma conexão, precisamos passar os comandos como se fossem uma única string, colocando-os entre aspas duplas `"` e separando os comandos com um ponto e virgula `;`.
 
 Vamos testar este primeiro exemplo:
 
@@ -69,11 +73,11 @@ Vejamos este segundo exemplo:
 ssh node01 "for i in {1..5}; do date; hostname; sleep 1; done"
 ```{{exec}}
 
-Neste caso entre cada impressão da data e do nome do computador houve uma espera de 1 segundo.
+Neste caso entre cada impressão da data e do nome do computador há uma espera de 1 segundo.
 
 > Lembrando que o ';' (ponto e virgula) no Shell sinaliza que um comando terminou e um novo comando se inicia, dessa forma podemos enviar praticamente qualquer conjunto de comandos para o computador remoto.
 
-Com base no artigo [SSH argument length](https://medium.com/r/?url=https%3A%2F%2Fwww.theeggeadventure.com%2Fwikimedia%2Findex.php%2FSsh_argument_length), para  verificar qual o tamanho máximo da string de comandos que podemos enviar para um determinado servidor **SSH**, execute o seguinte:
+Com base no artigo [SSH argument length](https://medium.com/r/?url=https%3A%2F%2Fwww.theeggeadventure.com%2Fwikimedia%2Findex.php%2FSsh_argument_length), para  verificar qual o tamanho máximo da string de comandos que podemos enviar para um determinado servidor **SSH**, execute o seguinte comando:
 
 ```bash
 ssh node01 "getconf -a | grep ARG_MAX"
@@ -86,11 +90,11 @@ ARG_MAX                            2097152
 _POSIX_ARG_MAX                     2097152
 ```{{}}
 
-> *Neste exemplo podemos enviar uma string de comando com até 2MB de tamanho (2.097.152/1024/1024 = 2).*
+> *Neste caso podemos enviar uma string de comando com até 2MB de tamanho (2.097.152/1024/1024 = 2).*
 
 ## Enviando um script para execução remota
 
-Vamos limpar a tela, voltar à pasta `$HOME` e copiar o script que está na pasta `/tmp`{{}}, com os comandos abaixo:
+Vamos limpar a tela, voltar à pasta `$HOME`{{}} e copiar um script que está na pasta `/tmp`{{}}, com os comandos abaixo:
 
 ```bash
 clear
@@ -104,7 +108,7 @@ Se quiser conferir o conteúdo do script, use o comando...
 cat script01.sh
 ```{{exec}}
 
-Para executar o script no computador remoto, use o seguinte comando:
+Para executar esse script no computador remoto, use o seguinte comando:
 
 ```bash
 ssh node01 < script01.sh
@@ -122,6 +126,18 @@ Tue Xxx 99 00:16:34 UTC 2022
 Tue Xxx 99 00:16:35 UTC 2022
 ```{{}}
 
-Show! Com o básico que aprendemos até aqui, já é possível simplificar um pouco o nosso dia a dia.
+Agora execute esse script localmente, com o comando abaixo.
 
-Mas vamos em frente e aprender algumas dicas a mais.
+```bash
+./script01.sh
+```{{exec}}
+
+Qual a diferença?
+
+### Solução
+
+O nome do computador na primeira linha, indicando onde o script foi executado.
+
+Show! Com o básico que aprendemos até aqui, já é possível otimizar algumas tarefas do nosso dia a dia.
+
+Vamos em frente e aprender algumas dicas mais.

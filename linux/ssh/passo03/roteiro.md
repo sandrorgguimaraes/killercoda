@@ -106,4 +106,4 @@ exit
 
 > Observe que o prompt de comando retornará para `ubuntu1@controlplane:~$`{{}}.
 
-Show! Vamos em frente.
+Show! Vamos pra parte interessante.
