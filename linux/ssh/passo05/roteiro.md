@@ -29,7 +29,7 @@ cat -n script02.sh
 - A primeira linha imprime uma mensagem com o nome do computador local;
 - Entre as linha 3 e 10 criamos a variável `CMD_SSH`{{}} com o conteúdo do script que será executado no computador remoto;
   - Para melhorar a legibilidade do código gravado na variável `CMD_SSH`{{}}, foi utilizado o recurso [Here Document](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHere_document) com o delimitador **EOF** (que podeira ter sido qualquer outro) e assim termos uma string com múltiplas linhas;
-- Na linha 12 fazemos uma conexão SSH simples como já aprendemos anteriormente, enviando os comandos armazenados na variável `CMD_SSH`{{}};
+- Na linha 12 fazemos uma conexão **SSH** simples como já aprendemos anteriormente, enviando os comandos armazenados na variável `CMD_SSH`{{}};
 - E pra finalizar, na linha 14, imprimimos uma nova mensagem com o nome do computador local.
 
 ## Executando o script
@@ -53,13 +53,13 @@ Wed Oct 19 00:26:45 UTC 2022
 E voltamos para o computador local 'controlplane' de novo.
 ```{{}}
 
-## Usando o `sudo`
+## Usando o `sudo`{{}}
 
 > Não vamos entrar no mérito da configuração do acesso de super-usuário, isso fica para outra oportunidade.
 
 Se um usuário qualquer executar um comando que necessita de privilegios de `root`{{}}, receberá uma mensagem acusando `Permission denied`{{}}.
 
-Isso não será diferente ao executarmos esse comando em um computador remoto. Vamos testar com o comando abaixo:
+Vamos testar com o comando abaixo:
 
 ```bash
 ssh node01 wc -l /etc/shadow
@@ -105,7 +105,7 @@ ssh -t ubuntu@node01 sudo wc -l /etc/shadow
 
 Informe a senha `ubuntu`{{exec}}.
 
-O resultado será:
+Perfeito! O resultado será:
 
 ```bash
 36 /etc/shadow
@@ -114,11 +114,11 @@ Connection to node01 closed.
 
 ## Copiando a chave SSH em lote
 
-Para facilitar a cópia da chave pública para um grupo de computadores remotos, disponibilizamos um conjunto de funções Shell, que poderá ser obtida com o comando abaixo:
+Para facilitar a cópia da chave pública para um grupo de computadores remotos, disponibilizamos um conjunto de funções Shell, que poderá ser obtida [[aqui](https://gist.github.com/sandrorgguimaraes/1ed08e668e57632892bf2f1ac61e4bbb)] com o comando abaixo:
 
 ```bash
 wget https://gist.githubusercontent.com/sandrorgguimaraes/1ed08e668e57632892bf2f1ac61e4bbb/raw/cf9675ecf999990b64e226029fa78df79c1f4de0/SSHcopyID.sh
-```{{}}
+```{{exec}}
 
 ```bash
 source SSHcopyID.sh
