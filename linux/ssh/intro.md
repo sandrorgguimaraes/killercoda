@@ -6,6 +6,6 @@ A seguir veremos os seguintes passos:
 - Criando um par de chaves **SSH**;
 - Copiando sua chave pública para um computador remoto;
 - Executando comandos remotamente;
-- Executando scripts remotamente.
+- Automatizando a execução.
 
 Vamos em frente, bom exercício!

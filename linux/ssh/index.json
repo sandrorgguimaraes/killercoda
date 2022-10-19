@@ -22,6 +22,10 @@
       {
         "title": "Executando comandos remotamente",
         "text": "passo04/roteiro.md"
+      },
+      {
+        "title": "Automatizando a execução",
+        "text": "passo05/roteiro.md"
       }
     ],
     "assets": {
