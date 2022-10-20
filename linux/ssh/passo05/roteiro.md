@@ -83,7 +83,7 @@ Hum! Não era bem isso que a gente esperava:
 sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
 ```{{}}
 
-> Para termos acesso `sudo`{{}} é necessário confirmar nossa identidade digitando a senha do usuário, neste caso precisamos informar ao `ssh`{{}} para iniciar um terminal para esta digitação, isso conseguimos com a opção `t`{{}}.
+> Para termos acesso `sudo`{{}} é necessário confirmar nossa identidade digitando a senha do usuário, neste caso precisamos informar ao `ssh`{{}} para iniciar um terminal para esta digitação, isso conseguimos com a opção `-t`{{}}.
 
 Vamos testar com o comando abaixo:
 
@@ -122,11 +122,11 @@ wget https://gist.githubusercontent.com/sandrorgguimaraes/1ed08e668e57632892bf2f
 
 ```bash
 source SSHcopyID.sh
-```{{}}
+```{{exec}}
 
 ```bash
 SSHcopyID node01 node02 node03
-```{{}}
+```{{exec}}
 
 ## Conclusão
 
