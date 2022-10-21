@@ -134,7 +134,7 @@ Agora execute esse script localmente, com o comando abaixo.
 
 <blockquote style="background: #f8f5da;border-left: 10px solid #eedfbc;">
 <p>Qual a diferença?</p>  
-  <details><summary style="font-weight: bold;">Resposta.:</summary><br>
+  <details><summary><b>Resposta.:</b></summary><br>
 O nome do computador na primeira linha, indicando onde o script foi executado.
 </details>
 </blockquote>
