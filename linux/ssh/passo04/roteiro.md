@@ -134,7 +134,7 @@ Agora execute esse script localmente, com o comando abaixo.
 
 Qual a diferença?
 
-<details><summary>Resposta</summary><br>
+<details><summary><b>Resposta.:</b></summary><br>
 O nome do computador na primeira linha, indicando onde o script foi executado.
 </details><br>
 

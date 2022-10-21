@@ -3,6 +3,26 @@ O **SSH** foi desenvolvido com o intuito de habilitar um canal de comunicação 
 ![SSH](./ssh.png)
 Fonte.: <https://www.hostinger.com.br/tutoriais/como-funciona-o-ssh>
 
+## Antes de começar
+
+Este ambiente interativo tem algumas funcionalidades interessantes para quem não quiser digitar os comandos.
+
+Vamos dar alguns exemplos:
+
+- Pare o mouse sobre o comando `ls -la`{{}} abaixo e vai aparecer o texto `copy`{{}}, indicando que ao clicar sobre o mesmo ele será copiado para a área de transferência, daí é só clicar com o botão direito do mouse na área do terminal ao lado e escolher a opção `Colar`{{}} e tecla o **ENTER**.
+
+```bash
+ls -la
+```{{copy}}
+
+- Agora no comando abaixo, ao parar o mouse sobre ele, vai aparecer o texto `exec`{{}}, indicando que ao clicar sobre o mesmo ele já será executado no terminal ao lado.
+
+```bash
+clear
+```{{exec}}
+
+> Portanto fique a vontade para digitar o comando ou usar esta funcionalidade do ambiente. 
+
 ## Uso simples e direto
 
 Para essa etapa vamos utilizar o usuário `ubuntu1`{{}}. Utilize o comando abaixo para mudarmos de usuário:
