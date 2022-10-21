@@ -9,7 +9,7 @@ Este ambiente interativo tem algumas funcionalidades interessantes para quem nã
 
 Vamos dar alguns exemplos:
 
-- Pare o mouse sobre o comando `ls -la`{{}} abaixo e vai aparecer o texto `copy`{{}}, indicando que ao clicar sobre o mesmo ele será copiado para a área de transferência, daí é só clicar com o botão direito do mouse na área do terminal ao lado e escolher a opção `Colar`{{}} e tecla o **ENTER**.
+- Pare o mouse sobre o comando `ls -la`{{}} abaixo e vai aparecer o texto `copy`{{}}, indicando que ao clicar sobre o mesmo ele será copiado para a área de transferência, daí é só clicar com o botão direito do mouse na área do terminal ao lado e escolher a opção `Colar`{{}}.
 
 ```bash
 ls -la
