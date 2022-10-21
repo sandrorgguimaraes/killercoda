@@ -132,11 +132,18 @@ Agora execute esse script localmente, com o comando abaixo.
 ./script01.sh
 ```{{exec}}
 
-Qual a diferença?
-
-<details><summary><b>Resposta.:</b></summary><br>
+<blockquote style="background: #f8f5da;border-left: 10px solid #eedfbc;">
+<p>Qual a diferença?</p>  
+  <details><summary style="font-weight: bold;">Resposta.:</summary><br>
 O nome do computador na primeira linha, indicando onde o script foi executado.
-</details><br>
+</details>
+</blockquote>
+
+# Qual a diferença?
+
+# <details><summary><b>Resposta.:</b></summary><br>
+# O nome do computador na primeira linha, indicando onde o script foi executado.
+# </details><br>
 
 Show! Com o básico que aprendemos até aqui, já é possível otimizar algumas tarefas do nosso dia a dia.
 
