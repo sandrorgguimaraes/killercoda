@@ -1,4 +1,4 @@
-Neste cenário vamos conhecer um pouco do SSH (***S**ecure **SH**ell*) e como utilizar o básico dele no nosso dia a dia.
+Nestes exercícios vamos conhecer um pouco do SSH (***S**ecure **SH**ell*) e seu funcionamento básico, esse conteúdo foi criado em conjunto com o artigo de mesmo nome disponível [aqui](https://medium.com/p/96849af3dcc3/edit).
 
 A seguir veremos os seguintes passos:
 
@@ -9,3 +9,5 @@ A seguir veremos os seguintes passos:
 - Automatizando a execução.
 
 Vamos em frente, bom exercício!
+
+> Se quiser saber o que estou escrevendo ou estudando visite o meu [Diário de Bordo](https://sandrorgguimaraes.github.io/) e veja as novidades.

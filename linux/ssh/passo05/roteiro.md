@@ -112,24 +112,11 @@ Perfeito! O resultado será:
 Connection to node01 closed.
 ```{{}}
 
-## Copiando a chave SSH em lote
-
-Para facilitar a cópia da chave pública para um grupo de computadores remotos, disponibilizamos um conjunto de funções Shell, que poderá ser obtida [[aqui](https://gist.github.com/sandrorgguimaraes/1ed08e668e57632892bf2f1ac61e4bbb)] com o comando abaixo:
-
-```bash
-wget https://gist.githubusercontent.com/sandrorgguimaraes/1ed08e668e57632892bf2f1ac61e4bbb/raw/cf9675ecf999990b64e226029fa78df79c1f4de0/SSHcopyID.sh
-```{{exec}}
-
-```bash
-source SSHcopyID.sh
-```{{exec}}
-
-```bash
-SSHcopyID node01 node02 node03
-```{{exec}}
-
 ## Conclusão
 
-Show! Com o básico que aprendemos até aqui, já é possível otimizar algumas tarefas do nosso dia a dia.
+Parabéns! Espero que estes exercícios tenham lhe ajudado a entender o funcionamento básico do SSH.
 
-Vamos em frente e aprender algumas dicas mais.
+> Se quiser saber o que estou escrevendo ou estudando visite o meu [Diário de Bordo](https://sandrorgguimaraes.github.io/) e veja as novidades.
+
+Tem alguma sugestão, dúvida ou quer relatar algum problema [clique aqui](https://github.com/sandrorgguimaraes/killercoda/issues/new?title=SSH%20-%20Contato%20imediato%20de%20primeiro%20grau).
+
