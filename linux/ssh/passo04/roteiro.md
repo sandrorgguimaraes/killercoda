@@ -132,13 +132,6 @@ Agora execute esse script localmente, com o comando abaixo.
 ./script01.sh
 ```{{exec}}
 
-# <blockquote style="background: #f8f5da;border-left: 10px solid #eedfbc;">
-# <p>Qual a diferença?</p>  
-#   <details><summary><b>Resposta.:</b></summary><br>
-# O nome do computador na primeira linha, indicando onde o script foi executado.
-# </details>
-# </blockquote>
-
 Qual a diferença?
 
 <details><summary><b>Resposta.:</b></summary><br>
